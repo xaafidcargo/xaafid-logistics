@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Xaafid Logistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Inline styles for iteration, to be moved to style.css */
+
+        /* About Hero */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/sea-freight-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .about-hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--primary-blue);
+            padding: 40px 0;
+            color: white;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: var(--primary-orange);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        /* Journey Section */
+        .journey-section {
+            padding: 80px 0;
+        }
+
+        .journey-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .journey-text {
+            flex: 1;
+        }
+
+        .journey-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .journey-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .journey-img-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .journey-img-wrapper img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            background-color: #F8F9FA;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(240, 142, 85, 0.1);
+            color: var(--primary-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Core Values */
+        .values-section {
+            padding: 80px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .value-icon {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        /* CTA */
+        .cta-section {
+            background-color: var(--primary-blue);
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .cta-text {
+            text-align: left;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cta-btn-white {
+            background: white;
+            color: var(--primary-blue);
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .cta-btn-orange {
+            background: var(--primary-orange);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .journey-container {
+                flex-direction: column;
+            }
+
+            .stats-grid {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .features-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .cta-text {
+                text-align: center;
+            }
+        }
+
+        /* Dark Mode overrides */
+        body.dark-mode .feature-card,
+        body.dark-mode .value-card {
+            background-color: #1E1E1E;
+            border-color: #333;
+        }
+
+        body.dark-mode .journey-text h2,
+        body.dark-mode .feature-card h3,
+        body.dark-mode .value-card h3 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-x">X</span>aafid
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html" style="color: var(--primary-blue); font-weight: 700;">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="quote.html" class="btn btn-primary btn-track">Get a Quote</a>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">GLOBAL LOGISTICS
+                    LEADER</span>
+                <h1>Connecting Worlds <br> Through Reliability</h1>
+                <p>Xaafid Cargo & Logistics is your trusted partner in global supply chain management, ensuring your
+                    goods reach their destination safely and on time.</p>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats-bar">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h2>10+</h2>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h2>5000+</h2>
+                    <p>Shipments Delivered</p>
+                </div>
+                <div class="stat-item">
+                    <h2>3</h2>
+                    <p>Global Offices</p>
+                </div>
+                <div class="stat-item">
+                    <h2>99%</h2>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey -->
+        <section class="journey-section">
+            <div class="container journey-container">
+                <div class="journey-text">
+                    <div class="title-underline" style="margin: 0 0 15px 0;"></div>
+                    <h2>Our Journey and Growth</h2>
+                    <p style="color: #666; margin-bottom: 20px;">Since our inception, Xaafid Cargo has evolved from a
+                        local carrier into a global logistics powerhouse. What started as a small team dedicated to
+                        local shipping has grown into an international network spanning multiple continents.</p>
+                    <p style="color: #666;">Driven by innovation and an unwavering commitment to excellence, we have
+                        consistently adapted to the changing landscape of global trade. We pride ourselves on our
+                        ability to handle complex logistics challenges while maintaining the personal touch that our
+                        clients have come to trust.</p>
+                </div>
+                <div class="journey-image">
+                    <div class="journey-img-wrapper">
+                        <img src="assets/warehouse-bg.jpg" alt="Warehouse">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2>Why Choose Us</h2>
+                <p style="color: #666; max-width: 600px; margin: 0 auto;">Delivering excellence through every mile of
+                    the journey.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-box"></i></div>
+                        <h3>Reliability</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">We ensure your cargo is handled
+                            with precision and arrives on schedule, every single time. Our tracking systems provide
+                            peace of mind.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Global Reach</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">With strategic offices and a vast
+                            network of international partners, we bridge the gap between continents effortlessly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3>Expert Handling</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">Our team consists of logistics
+                            veterans who understand the nuances of fragile, oversized, and time-sensitive shipments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission (Reusing existing HTML structure but styled) -->
+        <section class="vision-mission" style="padding: 80px 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <h2>Aragtideena & Hadafkeena</h2>
+                    <p style="color: #666;">Our Vision and Mission guide every delivery we make.</p>
+                </div>
+
+                <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                    <div style="flex: 1; background: #f8f9fa; padding: 30px; border-radius: 12px; min-width: 300px;">
+                        <span style="color: var(--primary-orange); font-weight: 700;">01.</span>
+                        <h3 style="margin: 10px 0;">Aragtideena (Vision)</h3>
+                        <p style="color: #666; font-size: 0.9rem;">To be the leading global logistics provider known for
+                            innovation, speed, and unparalleled customer satisfaction, setting the standard for how the
+                            world moves goods.</p>
+                    </div>
+                    <div style="flex: 1; background: #f8f9fa; padding: 30px; border-radius: 12px; min-width: 300px;">
+                        <span style="color: var(--primary-blue); font-weight: 700;">02.</span>
+                        <h3 style="margin: 10px 0;">Hadafkeena (Mission)</h3>
+                        <ul style="list-style: none; color: #666; font-size: 0.9rem;">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"
+                                    style="color: var(--primary-orange); margin-right: 8px;"></i> To provide safe,
+                                timely, and cost-effective logistics solutions.</li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle"
+                                    style="color: var(--primary-orange); margin-right: 8px;"></i> To maintain
+                                professional service and reliability.</li>
+                            <li><i class="fas fa-check-circle"
+                                    style="color: var(--primary-orange); margin-right: 8px;"></i> To empower businesses
+                                through seamless global supply chain management.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="values-section">
+            <div class="container">
+                <span
+                    style="color: var(--primary-blue); font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">OUR
+                    FOUNDATION</span>
+                <h2>Our Core Values</h2>
+
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Integrity</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">We believe in honesty and
+                            transparency. Every shipment is handled with the highest ethical standards.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-check-double"></i></div>
+                        <h3>Reliability</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">Our clients count on us to deliver
+                            when promised. We build robust systems that ensure consistency.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Efficiency</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">We optimize every route and process
+                            to save you time and cost without compromising safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-text">
+                    <h2 style="font-size: 2rem; margin-bottom: 10px;">Ready to optimize your logistics?</h2>
+                    <p style="opacity: 0.9;">Contact our team of experts today for a tailored shipping solution.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-btn-white">Contact Support</a>
+                    <a href="quote.html" class="cta-btn-orange">Get Tracking</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-x">X</span>aafid
+                </a>
+                <p>Connecting the world with professional cargo and logistics solutions.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Xaafid Cargo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
