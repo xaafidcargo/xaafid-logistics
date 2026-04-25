@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Shipment - Xaafid Logistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-x">X</span>aafid
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tracking.html" class="btn btn-primary btn-track">Track Shipment</a>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="tracking-main">
+        <section class="tracking-hero">
+            <div class="container">
+                <h1 class="page-title">Track Your Shipment</h1>
+                <p class="page-subtitle">Enter your tracking number to get real-time updates on your cargo.</p>
+
+                <div class="tracking-search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Enter Tracking Number (e.g. XFD-8895-B06A)" class="tracking-input">
+                    <button class="btn btn-primary btn-search"><i class="fas fa-search-location"></i> Track</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="tracking-result">
+            <div class="container">
+                <!-- Shipment Summary -->
+                <div class="result-card summary-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-truck"></i> Shipment Summary</h3>
+                        <span class="status-badge in-transit">● In Transit</span>
+                    </div>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <span class="label">ORIGIN</span>
+                            <span class="value">Guangzhou, CN</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">DESTINATION</span>
+                            <span class="value">Mogadishu, SO</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">EST. DELIVERY</span>
+                            <span class="value">Dec 24, 2024</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">CURRENT STATUS</span>
+                            <span class="value text-blue">At Sea</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tracking Progress -->
+                <div class="result-card progress-card">
+                    <h3>Tracking Progress</h3>
+                    <div class="progress-timeline">
+                        <div class="timeline-step completed">
+                            <div class="step-icon"><i class="fas fa-box"></i></div>
+                            <div class="step-content">
+                                <h4>Booked</h4>
+                                <span class="date">DEC 10, 2024</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step completed active">
+                            <div class="step-icon"><i class="fas fa-ship"></i></div>
+                            <div class="step-content">
+                                <h4>In Transit</h4>
+                                <span class="date">DEC 12, 2024</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <div class="step-content">
+                                <h4>Customs</h4>
+                                <span class="date">PENDING</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon"><i class="fas fa-truck-loading"></i></div>
+                            <div class="step-content">
+                                <h4>Out for Delivery</h4>
+                                <span class="date">SCHEDULED</span>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="step-content">
+                                <h4>Delivered</h4>
+                                <span class="date">PENDING</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 35%;"></div>
+                    </div>
+                </div>
+
+                <!-- Need Help -->
+                <div class="help-section">
+                    <div class="help-text">
+                        <h3>Need Help?</h3>
+                        <p>Our customer support team is available 24/7 to help you with your shipment queries.</p>
+                    </div>
+                    <div class="help-buttons">
+                        <a href="mailto:support@xaafid.com" class="btn btn-secondary btn-help"><i
+                                class="fas fa-envelope"></i> Email Support</a>
+                        <a href="tel:+123456789" class="btn btn-primary btn-help-call"><i class="fas fa-phone-alt"></i>
+                            Call Center</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-x">X</span>aafid
+                </a>
+                <p>Connecting the world with professional cargo and logistics solutions. Trusted across continents.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Somalia Office</h5>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Bakaaro, Agagaarka Salaam Somali Bank, Mogadishu</li>
+                    <li><i class="fas fa-phone-alt"></i> +252 61 4999820<br>+252 62 4444400</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Global Network</h5>
+                <ul class="contact-list">
+                    <li><i class="fas fa-plane"></i> <strong>China Office</strong><br>+86 150 6791 7930</li>
+                    <li><i class="fas fa-building"></i> <strong>UAE Office</strong><br>+971 50 262 9935</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> xaafidlogistics@gmail.com</li>
+                </ul>
+                <div class="quick-links">
+                    <h5>Quick Links</h5>
+                    <div class="tags">
+                        <a href="tracking.html">Track</a>
+                        <a href="#">Quote</a>
+                        <a href="#">Agents</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Xaafid Cargo & Logistics Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
