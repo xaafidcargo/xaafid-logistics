@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Xaafid Logistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Services Specific Styles - to be moved */
+        .services-hero {
+            background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), url('assets/warehouse-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .services-list-section {
+            padding: 80px 0;
+            background: #F8F9FB;
+        }
+
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .service-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-visual {
+            flex: 1;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .service-row:hover .service-visual img {
+            transform: scale(1.05);
+        }
+
+        .service-tag {
+            color: var(--primary-orange);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .service-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .service-content p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .service-features li i {
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+        }
+
+        .btn-text {
+            color: var(--primary-blue);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-text:hover {
+            gap: 12px;
+        }
+
+        /* Dark mode overrides */
+        body.dark-mode .services-list-section {
+            background-color: #121212;
+        }
+
+        body.dark-mode .service-content h2 {
+            color: white;
+        }
+
+        body.dark-mode .service-features li {
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-x">X</span>aafid
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" style="color: var(--primary-blue); font-weight: 700;">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="quote.html" class="btn btn-primary btn-track">Get a Quote</a>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="services-hero">
+            <div class="container">
+                <h1>Our Logistics Solutions</h1>
+                <p>Comprehensive supply chain services tailored to your business needs.</p>
+            </div>
+        </section>
+
+        <section class="services-list-section">
+            <div class="container">
+                <!-- 1. Sea Freight -->
+                <div class="service-row">
+                    <div class="service-content">
+                        <span class="service-tag">MARITIME TRANSPORT</span>
+                        <h2>Sea Freight Solutions</h2>
+                        <p>Comprehensive ocean transport services for full container loads (FCL) and less-than-container
+                            loads (LCL). We ensure your cargo reaches globally with maximum efficiency.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> FCL & LCL Port-to-Port services</li>
+                            <li><i class="fas fa-check-circle"></i> Specialized handling for oversized cargo</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time shipment tracking</li>
+                        </ul>
+                        <a href="sea-freight.html" class="btn-secondary"
+                            style="border-radius: 6px; padding: 10px 20px;">Request Quote <i class="fas fa-arrow-right"
+                                style="font-size: 0.8rem;"></i></a>
+                    </div>
+                    <div class="service-visual">
+                        <img src="assets/sea-freight-bg.jpg" alt="Sea Freight">
+                    </div>
+                </div>
+
+                <!-- 2. Air Freight -->
+                <div class="service-row reverse">
+                    <div class="service-content">
+                        <span class="service-tag">EXPRESS SHIPPING</span>
+                        <h2>Air Freight Services</h2>
+                        <p>When time is of the essence, our air freight solutions provide the speed and reliability your
+                            business demands. Perfect for high-value electronics and perishable goods.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Next-flight-out capability</li>
+                            <li><i class="fas fa-check-circle"></i> Temperature-controlled shipping</li>
+                            <li><i class="fas fa-check-circle"></i> Door-to-airport express</li>
+                        </ul>
+                        <a href="quote.html" class="btn-text">Request Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-visual">
+                        <img src="assets/air-freight-bg.jpg" alt="Air Freight">
+                    </div>
+                </div>
+
+                <!-- 3. Door to Door -->
+                <div class="service-row">
+                    <div class="service-content">
+                        <span class="service-tag">END-TO-END SOLUTIONS</span>
+                        <h2>Door to Door Logistics</h2>
+                        <p>Experience hassle-free shipping with our end-to-end service. We pick up the cargo from your
+                            doorstep and deliver it directly to its final destination.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Single point of contact</li>
+                            <li><i class="fas fa-check-circle"></i> Fully integrated supply chain</li>
+                            <li><i class="fas fa-check-circle"></i> Zero-hassle customs clearing</li>
+                        </ul>
+                        <a href="quote.html" class="btn-text">Request Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-visual">
+                        <img src="assets/door-door-bg.jpg" alt="Door to Door">
+                    </div>
+                </div>
+
+                <!-- 4. Warehousing -->
+                <div class="service-row reverse">
+                    <div class="service-content">
+                        <span class="service-tag">SECURE STORAGE</span>
+                        <h2>Smart Warehousing</h2>
+                        <p>Our modern, secure facilities offer more than just storage. We provide advanced inventory
+                            management, pick-and-pack services, and distribution solutions.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> WMS integrated tracking</li>
+                            <li><i class="fas fa-check-circle"></i> Climate-controlled zones</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Surveillance</li>
+                        </ul>
+                        <a href="quote.html" class="btn-text">Request Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-visual">
+                        <img src="assets/warehouse-bg.jpg" alt="Warehousing">
+                    </div>
+                </div>
+
+                <!-- 5. Customs -->
+                <div class="service-row">
+                    <div class="service-content">
+                        <span class="service-tag">EXPERT COMPLIANCE</span>
+                        <h2>Customs Clearance</h2>
+                        <p>Navigate the complexities of international trade regulations with ease. Our expert brokers
+                            ensure all documentation is handled correctly to minimize delays.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Duty and tax optimization</li>
+                            <li><i class="fas fa-check-circle"></i> Regulatory compliance audits</li>
+                            <li><i class="fas fa-check-circle"></i> Electronic filing specialists</li>
+                        </ul>
+                        <a href="quote.html" class="btn-text">Request Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-visual">
+                        <img src="assets/customs-bg.jpg" alt="Customs">
+                    </div>
+                </div>
+
+                <!-- 6. Local Distribution -->
+                <div class="service-row reverse">
+                    <div class="service-content">
+                        <span class="service-tag">LAST MILE EXCELLENCE</span>
+                        <h2>Local Distribution</h2>
+                        <p>The final stretch is the most critical. Our local delivery network ensures your products
+                            reach the end-user promptly and safely.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Real-time last mile tracking</li>
+                            <li><i class="fas fa-check-circle"></i> Proof of delivery (e-POD)</li>
+                            <li><i class="fas fa-check-circle"></i> Specialized handling for fragile items</li>
+                        </ul>
+                        <a href="quote.html" class="btn-text">Request Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-visual">
+                        <img src="assets/delivery-bg.jpg" alt="Delivery">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section style="background-color: #0d1b38; padding: 60px 0; color: white; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Ready to streamline your supply chain?</h2>
+                <p style="opacity: 0.8; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Join hundreds of businesses that trust Xaafid Cargo for their global logistics needs.</p>
+                <a href="contact.html" class="btn btn-primary"
+                    style="background: var(--primary-orange); border: none;">Talk to a Specialist</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-x">X</span>aafid
+                </a>
+                <p>Connecting the world with professional cargo and logistics solutions.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Xaafid Cargo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
